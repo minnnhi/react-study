@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+
+import Header from "@/components/layout/Header";
+import Sidebar from "@/components/layout/Sidebar";
+import Contents from "@/components/layout/Contents";
+import Footer from "@/components/layout/Footer";
+import GlobalStyle from "@/styles/GlobalStyle";
+
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 240px;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <GlobalStyle />
+            <AppContainer>
+                <Header title="Header title" description="ㅎㅇㅎㅇㅎㅇ" />
+                <Sidebar title="menu title" />
+                <Contents title="Contents title" />
+                <Footer address="footer address" />
+            </AppContainer>
+        </>
+    );
 }
 
 export default App;
