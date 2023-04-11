@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Counter from "../common/Counter";
-import Input from "../common/Input";
-import Calculator from "../common/Calculator";
-import Popup from "../common/Popup";
-import LiveClock from "../common/LiveClock";
-import TodoList from "../common/ToDoList";
+// import Counter from "../common/Counter";
+// import Calculator from "../common/Calculator";
+// import LiveClock from "../common/LiveClock";
+// import TodoList from "../common/ToDoList";
+import { Outlet } from "react-router-dom";
 
 const ContentsContainer = styled.main`
     overflow: auto;
@@ -13,20 +12,23 @@ const ContentsContainer = styled.main`
     padding: 10px;
 `;
 
-type Props = {
-    title: string;
-};
+// type Props = {
+//     title: string;
+// };
 
-function Contents({ title }: Props) {
+function Contents() {
     return (
+        // <ContentsContainer>
+        //     {/* <h2>{title}</h2> */}
+        //     {/* <Counter />
+        //     <Input />
+        //     <Calculator />
+        //     <LiveClock />
+        //     <Popup content="리액트 스터디" btnTitle="확인" /> */}
+        //     <TodoList />
+        // </ContentsContainer>
         <ContentsContainer>
-            {/* <h2>{title}</h2> */}
-            {/* <Counter />
-            <Input />
-            <Calculator />
-            <LiveClock />
-            <Popup content="리액트 스터디" btnTitle="확인" /> */}
-            <TodoList />
+            <Outlet />
         </ContentsContainer>
     );
 }

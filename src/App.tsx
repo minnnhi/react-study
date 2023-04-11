@@ -20,7 +20,7 @@ function App() {
             <AppContainer>
                 <Header title="Header title" description="ㅎㅇㅎㅇㅎㅇ" />
                 <Sidebar title="menu title" />
-                <Contents title="Contents title" />
+                <Contents />
                 <Footer address="footer address" />
             </AppContainer>
         </>
